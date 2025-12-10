@@ -4,6 +4,10 @@ import bodyParser from "body-parser";
 
 // Import routes
 import qaRoute from "./routes/questionRoute.js";
+import questionRoute from "./routes/questionRoute.js";
+
+
+
 
 // Initialize Express app
 const app = express();
@@ -13,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json()); // Parse JSON request bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
+app.use("/api/questions", questionRoute);
 
 // Basic route for testing
 app.get("/", (req, res) => {

@@ -17,7 +17,9 @@ model Question {
   id        String   @id @default(cuid())
   question  String
   answer    String
-  evidence  String   // JSON string containing quran and hadith references
+  disclaimer String
+  evidenceQuran Json
+  evidenceHadith Json // JSON string containing quran and hadith references
   createdAt DateTime @default(now())
 
   @@map("questions")
