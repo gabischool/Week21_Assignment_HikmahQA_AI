@@ -51,7 +51,7 @@ app.use("*", (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-  console.log(`Islamic Q&A API: POST http://localhost:${PORT}/api/qa/ask`);
+  console.log(`Islamic Q&A API: POST http://localhost:${PORT}/api/question/ask`);
 });
 
 export default app;
