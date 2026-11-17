@@ -6,35 +6,20 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-async function answerQuestion({ question }) {
-  // STEP 1: Create a systemMessage variable that trains the AI to be an Islamic Q&A assistant
-  // - Use only Quran and Sahih Hadith as sources
-  // - Always include a disclaimer that this is NOT a fatwa
-  // - Return JSON with: answer, evidence (quran array, hadith array), disclaimer
-
-
-  // STEP 2: Create a userMessage variable with the question
-
-
-  // STEP 3: Call client.responses.create() with model "gpt-4o" and json_object format
-
-
-  // STEP 4: Get response.output_text and check if it's empty
-
-
-  // STEP 5: Parse the JSON response with JSON.parse()
-
-
-  // STEP 6: Save to database using prisma.question.create()
-
-
-  // STEP 7: Return the parsed response
-
+function getSystemPrompt() {
+  // Write the instruction for your system
+  return ``;
 }
 
-export async function askIslamicQuestion({ question }) {
+export async function answerQuestion({ question }) {
   try {
-    return await answerQuestion({ question });
+    const systemMessage = getSystemPrompt();
+
+    // TODO: Ask OpenAI using systemMessage and the question
+    // client.responses.create() — model "gpt-4o", json_object format
+
+    // TODO: Parse response.output_text, save it with prisma.question.create(), and return it
+
   } catch (error) {
     throw error;
   }

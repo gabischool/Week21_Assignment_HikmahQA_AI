@@ -1,6 +1,6 @@
 import express from "express";
 
-// STEP 1: Import askIslamicQuestion from questionService.js
+// STEP 1: Import answerQuestion from questionService.js
 
 
 const router = express.Router();
@@ -13,7 +13,7 @@ router.post("/ask", async (req, res) => {
     // STEP 3: Validate the question (check if it exists and is a string)
 
 
-    // STEP 4: Call askIslamicQuestion() with the question
+    // STEP 4: Call answerQuestion() with the question
 
 
     // STEP 5: Send a success response with the answer
